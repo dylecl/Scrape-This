@@ -35,8 +35,8 @@ app.set("view engine", "handlebars");
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-
+mongoose.connect(MONGODB_URI);
+//, { useNewUrlParser: true }
 // Routes
 
 // A GET route for scraping the echoJS website
@@ -47,27 +47,7 @@ app.get("/scrape", function(req, res) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
 
-    // $(".postlist_item").each(function(i, element) {
-    //   // Save an empty result object
-      
 
-    //   // Add the text and href of every link, and save them as properties of the result object
-    //   result.title = $(this)
-    //     .children("header")
-    //     .children("h1")
-    //     .children("a")
-    //     .text();
-    //   result.link = $(this)
-    //     .children("header")
-    //     .children("h1")
-    //     .children("a")
-    //     .attr("href");
-    //   result.summary = $(this)
-    //     .children("div.item_content")
-    //     .children("div.excerpt")
-    //     .children("p")
-    //     .text();
-        
 
     // $("h1.js_entry-title").each(function(i, element) {
       $("article.postlist__item").each(function(i, element) {
