@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="titleThing">Scraped Articles!</h1><button href="/scrape" id="scraper">Scrape More!</button>
+    <div class="row transparent">
+      <div class="col-9">
+          {{#each articles}}
+            {{> articles/article-block}}
+          {{/each}}
+      </div>
+      <div class="col-3">
+   			<div id="notes">
+        </div>
+      </div>
+    </div>
+
+
+</div>

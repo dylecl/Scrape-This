@@ -1,0 +1,23 @@
+
+.titleThing {
+    margin-top: 3rem;
+    margin-bottom: 0%
+}
+
+body {
+    background-image: url("./onions.jpg")
+}
+h1 {
+    background-color:rgba(255, 255,255, 0.8);
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px
+}
+
+.articless {
+    background-color:rgba(255, 255,255, 0.8);
+    
+}
+.transparent {
+    background-color:rgba(255, 255,255, 0.8);
+
+}
